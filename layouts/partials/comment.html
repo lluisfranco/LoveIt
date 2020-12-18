@@ -3,6 +3,8 @@
 {{- $comment := .Scratch.Get "comment" | default dict -}}
 {{- $commentConfig := dict -}}
 
+{{ template "_internal/disqus.html" . }}
+
 {{- if $comment.enable -}}
     <div id="comments">
         {{- /* Disqus Comment System */ -}}
